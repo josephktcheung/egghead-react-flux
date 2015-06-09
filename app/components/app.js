@@ -3,7 +3,7 @@ var AppActions = require('../actions/app-actions.js');
 var Catalog = require('./catalog/app-catalog.js');
 var Cart = require('./cart/app-cart.js');
 var Router = require('react-router-component');
-var CatalogDetail = require('./catalog/app-catalogitem.js');
+var CatalogDetail = require('./product/app-catalogdetail.js');
 var Template = require('./app-template.js');
 
 var Locations = Router.Locations;

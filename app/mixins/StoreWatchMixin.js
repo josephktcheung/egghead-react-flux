@@ -3,7 +3,7 @@ var AppStore = require('../stores/app-store.js');
 var StoreWatchMixin = function(cb) {
   return {
     getInitialState: function() {
-      return cb();
+      return cb(this);
     },
     componentWillMount: function() {
       AppStore.addChangeListener(this._onChange);
@@ -12,7 +12,7 @@ var StoreWatchMixin = function(cb) {
       AppStore.removeChangeListener(this._onChange);
     },
     _onChange: function() {
-      this.setState(cb());
+      this.setState(cb(this));
     }
   }
 }

@@ -2,7 +2,6 @@ var AppDispatcher = require('../dispatchers/app-dispatcher');
 var AppConstants = require('../constants/app-constants');
 var assign = require('react/lib/Object.assign');
 var EventEmitter = require('events').EventEmitter;
-
 var CHANGE_EVENT = 'change';
 
 var _catalog = [];
@@ -13,7 +12,8 @@ for(var i=1; i<9; i++){
     'title':'Widget #' + i,
     'summary': 'This is an awesome widget!',
     'description': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, commodi.',
-    'cost': i
+    'cost': i,
+    'img': require('../assets/product.png')
   });
 }
 

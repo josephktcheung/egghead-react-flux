@@ -23,6 +23,9 @@ var common = {
       } ,{
         test: /\.css$/,
         loaders: ['style', 'css']
+      }, {
+        test: /\.(png|jpg)$/,
+        loader: 'url?limit=8192'
       }
     ]
   },
