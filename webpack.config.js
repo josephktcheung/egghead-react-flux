@@ -48,7 +48,7 @@ if(TARGET === 'build') {
       }),
       new HtmlWebpackPlugin({
         title: 'Egghead React Flux',
-        template: path.join(ROOT_PATH, 'app/index.tpl')
+        template: path.join(ROOT_PATH, 'app/index.html')
       })
     ],
   });
@@ -80,7 +80,7 @@ if(TARGET === 'dev') {
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
       new webpack.NoErrorsPlugin(),
-      new HtmlWebpackPlugin({template: path.join(ROOT_PATH, 'dev-server/index.html')}),
+      new HtmlWebpackPlugin({template: path.join(ROOT_PATH, 'app/index.html')}),
     ]
   });
 }
